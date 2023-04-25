@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function over(obj){
+            obj.src="media/banan.png";
+        }
+        function out(obj){
+            obj.src="media/apple.png";
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 올려</h3>
+    <hr>
+    <img src="media/apple.png" alt="이미지"
+        onmouseover="over(this)"
+        onmouseout="out(this)">
+</body>
+</html>
