@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+</head>
+<body>
+    <h3>텍스트가 자동 회전, 마우스 클릭시 중단</h3>
+    <hr>
+    <div><span id="span" style="background-color: yellow">
+    bingbingbingtext</span>
+    </div>
+
+<script>
+   let span = document.getElementById("span");
+   var timerID = setInterval("doRotate()",20);
+   
+   span.onclick = function(e){
+    clearInterval(timerID);
+   }
+   function doRotate(){
+    let text = span.innerHTML;
+    var first = text.substr(0,1);
+    var last = text.substr(1,text.length-1);
+    text =last + first;
+    span.innerHTML = text;
+   }
+</script>
+</body>
+</html>

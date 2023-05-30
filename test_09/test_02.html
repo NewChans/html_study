@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>radio pic</h3>
+    <hr>
+    <form>
+        <input type="radio" name="fruit" value="banana"
+        onchange="change()">바나나
+        <input type="radio" name="fruit" value="apple"
+        onchange="change()">사과
+        <input type="radio" name="fruit" value="mango"
+        onchange="change()">망고
+        <br>
+        <img id="img" src="">
+    </form>
+
+    <script>
+        function change(){
+        var found =null;
+        var fruit = document.getElementsByName("fruit");
+        for(let i=0;i<fruit.length;i++){
+            if(fruit[i].checked == true){
+                found = fruit[i];
+            }
+        }
+        var img = document.getElementById("img");
+        img.src= "media/"+found.value+".png";
+    }
+    </script>
+</body>
+</html>
